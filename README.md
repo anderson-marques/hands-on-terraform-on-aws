@@ -39,6 +39,14 @@ variable "zones" {
   type    = "list"
   default = ["us-east-1a", "us-east-1b"]
 }
+
+variable "images" {
+  type    = "map"
+  default = {
+    us-east-1 = "image-1234"
+    us-west-1 = "image-2345"
+  }
+}
 ```
 
 #### 5. Resource
