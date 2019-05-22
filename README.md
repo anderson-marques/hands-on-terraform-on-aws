@@ -62,3 +62,10 @@ echo "Terraform rocks"
 EOF
 }
 ```
+
+## Terraform States
+
+When we run `terraform apply` the first time, it is created a file named `terraform.tfstate`.
+This file contains the **Known state** of your infrasctructure. The terraform template contains
+the **Desired State**. The ideal environment have the desired, actual and know state matching.
+
