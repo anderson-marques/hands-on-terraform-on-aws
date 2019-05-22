@@ -43,7 +43,7 @@ variable "zones" {
 
 #### 5. Resource
 
-```h
+```hcl
 resource "aws_resource_type" "xpto" {
   string_attribute = "${var.ami}"
   integer_attribute = 2
