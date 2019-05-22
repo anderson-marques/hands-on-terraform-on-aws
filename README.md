@@ -27,3 +27,30 @@ was created targeting be an human-friendly configuration language.
   comment example
 */
 ```
+
+#### 4. Variables
+
+```hcl
+variable "ami" {
+  description = "Some AMI"
+}
+
+variable "zones" {
+  type    = "list"
+  default = ["us-east-1a", "us-east-1b"]
+}
+```
+
+#### 5. Resource
+
+```h
+resource "aws_resource_type" "xpto" {
+  string_attribute = "${var.ami}"
+  integer_attribute = 2
+  boolean_data = false
+  text_data = <<EOF
+#!/bin/bash
+echo "Terraform rocks"
+EOF
+}
+```
